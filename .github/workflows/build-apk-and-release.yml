@@ -1,0 +1,82 @@
+name: Build APK and Push Release
+
+on:
+  push:
+    branches: [main, master]
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build Android APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Build Web Application
+        run: npm run build
+
+      - name: Sync Capacitor Android Project
+        run: npx cap sync android
+
+      - name: Make Gradle Wrapper Executable
+        run: chmod +x android/gradlew
+
+      - name: Build Android Debug & Release APK
+        run: |
+          cd android
+          ./gradlew assembleDebug
+          cd ..
+          mkdir -p release-apks
+          cp android/app/build/outputs/apk/debug/app-debug.apk release-apks/TheOtherSide-v1.0.0.apk
+
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: TheOtherSide-v1.0.0-apk
+          path: release-apks/TheOtherSide-v1.0.0.apk
+
+      - name: Create GitHub Release and Upload APK
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/') || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        with:
+          tag_name: v1.0.0
+          name: 'The Other Side - v1.0.0 Release'
+          body: |
+            ### The Other Side — Mindful AI Mediated Chat
+            **Release v1.0.0 (Android APK)**
+
+            - 🕊️ Direct chat via shareable invite links in real-time
+            - ⚖️ Empathy-driven AI Mediator with de-escalation suggestions
+            - 🌿 Mindful pacing mode & 3-second breathing micro-rituals
+            - 📱 Standalone Android APK ready for install
+          draft: false
+          prerelease: false
+          files: release-apks/TheOtherSide-v1.0.0.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,188 @@
+{
+  "rooms": {
+    "maya-lin": {
+      "id": "maya-lin",
+      "name": "Maya Lin",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=256&h=256&q=80",
+      "participants": [
+        {
+          "id": "alex",
+          "name": "Alex Morgan",
+          "email": "alex@craft.io",
+          "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=256&h=256&q=80",
+          "isOnline": true,
+          "status": "active"
+        },
+        {
+          "id": "maya",
+          "name": "Maya Lin",
+          "email": "maya.lin@quietcraft.io",
+          "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=256&h=256&q=80",
+          "isOnline": true,
+          "status": "active"
+        }
+      ],
+      "lastMessageSnippet": "I didn't change it on purpose, but I ...",
+      "lastMessageTime": "Just now",
+      "status": "active",
+      "pacingMode": true,
+      "pacingSeconds": 3,
+      "mediatorActive": true,
+      "createdAt": "2026-10-31T08:52:41.431Z"
+    },
+    "julian-vance": {
+      "id": "julian-vance",
+      "name": "Julian Vance",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=256&h=256&q=80",
+      "participants": [
+        {
+          "id": "alex",
+          "name": "Alex Morgan",
+          "email": "alex@craft.io",
+          "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=256&h=256&q=80",
+          "isOnline": true,
+          "status": "active"
+        },
+        {
+          "id": "julian",
+          "name": "Julian Vance",
+          "email": "julian@vance.design",
+          "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=256&h=256&q=80",
+          "isOnline": true,
+          "status": "in_dialogue"
+        }
+      ],
+      "lastMessageSnippet": "“Could we set clear expectations arou…”",
+      "lastMessageTime": "2h",
+      "status": "active",
+      "pacingMode": true,
+      "pacingSeconds": 3,
+      "mediatorActive": true,
+      "createdAt": "2026-10-31T08:52:41.431Z"
+    },
+    "elena-rostova": {
+      "id": "elena-rostova",
+      "name": "Elena Rostova",
+      "avatar": "",
+      "participants": [
+        {
+          "id": "alex",
+          "name": "Alex Morgan",
+          "email": "alex@craft.io",
+          "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=256&h=256&q=80",
+          "isOnline": true,
+          "status": "active"
+        },
+        {
+          "id": "elena",
+          "name": "Elena Rostova",
+          "email": "elena.rostova@dialogue.org",
+          "avatar": "",
+          "isOnline": false,
+          "status": "pending"
+        }
+      ],
+      "lastMessageSnippet": "Invitation sent via WhatsApp link",
+      "lastMessageTime": "Pending",
+      "status": "pending",
+      "pacingMode": true,
+      "pacingSeconds": 3,
+      "mediatorActive": true,
+      "createdAt": "2026-10-31T08:52:41.431Z"
+    },
+    "david-chen": {
+      "id": "david-chen",
+      "name": "David Chen",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=256&h=256&q=80",
+      "participants": [
+        {
+          "id": "alex",
+          "name": "Alex Morgan",
+          "email": "alex@craft.io",
+          "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=256&h=256&q=80",
+          "isOnline": true,
+          "status": "active"
+        },
+        {
+          "id": "david",
+          "name": "David Chen",
+          "email": "david.chen@calmworks.com",
+          "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=256&h=256&q=80",
+          "isOnline": false,
+          "status": "resolved"
+        }
+      ],
+      "lastMessageSnippet": "“Thank you for taking time to hear my …”",
+      "lastMessageTime": "3d",
+      "status": "resolved",
+      "pacingMode": false,
+      "pacingSeconds": 0,
+      "mediatorActive": true,
+      "createdAt": "2026-10-31T08:52:41.431Z"
+    }
+  },
+  "messages": {
+    "maya-lin": [
+      {
+        "id": "m1",
+        "roomId": "maya-lin",
+        "senderId": "maya",
+        "senderName": "Maya Lin",
+        "senderAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=256&h=256&q=80",
+        "text": "I felt overwhelmed when the plan changed yesterday without warning.",
+        "timestamp": "2026-10-31T06:52:41.431Z",
+        "timeFormatted": "10:14 AM"
+      },
+      {
+        "id": "m2",
+        "roomId": "maya-lin",
+        "senderId": "maya",
+        "senderName": "Maya Lin",
+        "senderAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=256&h=256&q=80",
+        "text": "It felt like my schedule didn't matter.",
+        "timestamp": "2026-10-31T06:53:41.431Z",
+        "timeFormatted": "10:15 AM",
+        "sentimentTag": "Expressing hurt"
+      },
+      {
+        "id": "msg-1793437420538-is0i9",
+        "roomId": "maya-lin",
+        "senderId": "alex",
+        "senderName": "Alex Morgan",
+        "senderAvatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=256&h=256&q=80",
+        "text": "I didn't change it on purpose, but I hear that it caused stress. Can we coordinate next time so you're not caught off guard?",
+        "timestamp": "2026-10-31T09:03:40.520Z",
+        "timeFormatted": "09:03 AM",
+        "isMediated": true,
+        "originalDraft": "You always do this when you get stressed and blame everyone else. I did not change it on",
+        "rewriteUsed": true
+      }
+    ],
+    "julian-vance": [
+      {
+        "id": "j1",
+        "roomId": "julian-vance",
+        "senderId": "julian",
+        "senderName": "Julian Vance",
+        "senderAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=256&h=256&q=80",
+        "text": "Could we set clear expectations around the client handoff tomorrow?",
+        "timestamp": "2026-10-31T05:52:41.431Z",
+        "timeFormatted": "08:30 AM",
+        "sentimentTag": "Constructive Request"
+      }
+    ],
+    "david-chen": [
+      {
+        "id": "d1",
+        "roomId": "david-chen",
+        "senderId": "david",
+        "senderName": "David Chen",
+        "senderAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=256&h=256&q=80",
+        "text": "Thank you for taking time to hear my perspective on the project timeline.",
+        "timestamp": "2026-10-28T08:52:41.431Z",
+        "timeFormatted": "Oct 28",
+        "sentimentTag": "Gratitude"
+      }
+    ]
+  }
+}

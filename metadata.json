@@ -1,0 +1,8 @@
+{
+  "name": "The Other Side - Mindful AI Mediated Chat",
+  "description": "Conversations made kinder. Real-time direct chat with empathetic AI mediation, mindful pacing, and tone de-escalation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
